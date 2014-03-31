@@ -1,0 +1,7 @@
+cc=gcc
+CFLAGS=-Wall -o
+
+ProblemOne: ProblemOne.c
+	$(cc) $(CFLAGS) ProblemOne ProblemOne.c
+
+clean: rm -f *~ ProblemOne
