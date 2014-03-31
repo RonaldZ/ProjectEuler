@@ -6,26 +6,32 @@
 		Find the sum of all the multiples of 3 or 5 below 1000
 */
 
-#include<stdio.h>
+#include <iostream>
+using namespace std;
 
-int sumOfMultiples(int x);
-
-int main(){
-	int answer = sumOfMultiples(1000);
-	printf("Answer: %2d\n", answer);
-	
-	return 0;
-}
+class ProblemOne{
+	public:
+		int sumOfMultiples(int);
+};
 
 //finds the sum of the multiples of 3 or 5 up to number x
-int sumOfMultiples(int x){
+int ProblemOne::sumOfMultiples(int x){
 	int sumReturn = 0;
-	int i = 0;
-	for(i = 3;i < x; i += 3)
-		sumReturn +=i;
-	for(i = 5;i < x; i += 5)
-		if((i % 3) != 0)
-			sumReturn += i;
+	for(int i = 3; i < x; i +=3)
+		sumReturn += i;
 	
+	for(int i = 5; i < x; i +=5)
+		if(i % 3 != 0)
+			sumReturn += i;
+			
 	return sumReturn;
 }
+
+int main(){
+	ProblemOne prob1;
+	
+	cout << "Answer: " << prob1.sumOfMultiples(1000);
+	
+	return 1;
+}
+

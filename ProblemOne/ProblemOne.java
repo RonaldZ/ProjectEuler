@@ -21,7 +21,7 @@ public class ProblemOne{
 	public static void main(String[] args){
 		ProblemOne prob1 = new ProblemOne();
 		
-		System.out.println(prob1.sumofmultiples(1000));
+		System.out.println(prob1.sumOfMultiples(1000));
 		
 	}
 }

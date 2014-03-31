@@ -1,7 +1,18 @@
 cc=gcc
+jc=javac
+cpp=g++
 CFLAGS=-Wall -o
 
-ProblemOne: ProblemOne.c
-	$(cc) $(CFLAGS) ProblemOne ProblemOne.c
+all: ProblemOneC ProblemOneCPP ProblemOneJava
 
-clean: rm -f *~ ProblemOne
+ProblemOneC: ProblemOne.c
+	$(cc) $(CFLAGS) ProblemOneC ProblemOne.c
+
+ProblemOneCPP: ProblemOne.cpp
+	$(cpp) $(CFLAGS) ProblemOneCPP ProblemOne.cpp
+
+ProblemOneJava: ProblemOne.java
+	$(jc) ProblemOne.java
+
+clean: 
+	del ProblemOneC.exe ProblemOneCPP.exe ProblemOne.class
