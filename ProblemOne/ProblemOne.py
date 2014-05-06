@@ -21,4 +21,4 @@ def sumOfMultiples(x):
 	
 	return sumReturn
 
-print "Answer: ", sumOfMultiples(1000)
+print ("Answer: ", sumOfMultiples(1000))
